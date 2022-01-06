@@ -10,3 +10,11 @@ Content-Type: application/json
 }
 
 ###
+
+GET http://localhost:5500/api/productos/
+
+###
+
+GET http://localhost:5500/api/productos/61d660081d68aac562a58076
+
+###

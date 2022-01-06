@@ -10,9 +10,9 @@ const crearProducto = async (data) => {
   }
 };
 
-const getTodos = async () => {
+const getProductos = async () => {
   try {
-    const { data } = await axios.get("/api/product");
+    const { data } = await axios.get("http://localhost:5500/api/productos/");
     return { success: true, data };
   } catch (err) {
     console.error(err);
@@ -40,4 +40,4 @@ const editarProducto = async (id, data) => {
   }
 };
 
-export { crearProducto, getTodos, getUnProducto, editarProducto };
+export { crearProducto, getProductos, getUnProducto, editarProducto };

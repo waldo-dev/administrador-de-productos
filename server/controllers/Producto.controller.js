@@ -20,4 +20,23 @@ const crearProducto = async (req, res) => {
   }
 };
 
-module.exports = { crearProducto };
+const obtenerProductos = async (req, res) => {
+  try {
+    const productos = await ProductoModel.find();
+    res.json(productos);
+  } catch (err) {
+    res.status(500).json({ msj: "Internal server error" });
+  }
+};
+
+const obtenerUnProducto = (req, res) => {
+  try {
+    ProductoModel.findOne({
+      _id: req.params.id,
+    }).then((producto) => res.json(producto));
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+module.exports = { crearProducto, obtenerProductos, obtenerUnProducto };

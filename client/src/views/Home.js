@@ -1,12 +1,15 @@
 import React from "react";
-import Form from "../components/Form/Form";
-import ProductList from "../components/ProductList/ProductList";
+import { Router } from "@reach/router";
+import Main from "../components/Main/Main";
+import Detail from "../components/Detail/Detail";
 
 const Home = () => {
   return (
     <div>
-      <Form />
-      <ProductList />
+      <Router>
+        <Main path="/" />
+        <Detail path="/:id" />
+      </Router>
     </div>
   );
 };

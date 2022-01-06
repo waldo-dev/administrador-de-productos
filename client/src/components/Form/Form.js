@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./Form.module.css";
 import { crearProducto } from "../../actions/Producto";
 
@@ -37,7 +37,9 @@ const Form = (props) => {
         <input type="text" className={style.inputDescription} />
       </label>
 
-      <button className={style.button}>Create</button>
+      <button className={style.button} onSubmit={onSubmit}>
+        Create
+      </button>
     </form>
   );
 };
