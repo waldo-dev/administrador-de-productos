@@ -1,0 +1,12 @@
+### crear producto
+
+POST http://localhost:5500/api/productos/new
+Content-Type: application/json
+
+{
+    "nombre": "mochila",
+    "precio": 2000,
+    "descripcion": "Mochila fea"
+}
+
+###
