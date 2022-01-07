@@ -29,9 +29,9 @@ const obtenerProductos = async (req, res) => {
   }
 };
 
-const obtenerUnProducto = (req, res) => {
+const obtenerUnProducto = async (req, res) => {
   try {
-    ProductoModel.findOne({
+    await ProductoModel.findOne({
       _id: req.params.id,
     }).then((producto) => res.json(producto));
   } catch (err) {
@@ -39,4 +39,24 @@ const obtenerUnProducto = (req, res) => {
   }
 };
 
-module.exports = { crearProducto, obtenerProductos, obtenerUnProducto };
+const actualizarUnProducto = async (req, res) => {
+  await ProductoModel.findOneAndUpdate({ _id: req.params.id }, req.body, {
+    new: true,
+  })
+    .then((updatedProduct) => res.json(updatedProduct))
+    .catch((err) => res.json(err));
+};
+
+const eliminarUnProducto = async (req, res) => {
+  await ProductoModel.deleteOne({ _id: req.params.id })
+    .then((deletedProduct) => res.json(deletedProduct))
+    .catch((err) => res.json(err));
+};
+
+module.exports = {
+  crearProducto,
+  obtenerProductos,
+  obtenerUnProducto,
+  actualizarUnProducto,
+  eliminarUnProducto,
+};

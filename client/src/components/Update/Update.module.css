@@ -1,0 +1,28 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  margin: 1rem auto;
+  background-color: rgb(241, 241, 241);
+  border-radius: 1rem;
+  box-shadow: 10px 5px 5px rgb(211, 211, 211);
+}
+
+.label {
+  margin: 1rem;
+}
+
+.input {
+  margin: 1rem;
+}
+
+.button {
+  background-color: green;
+  border: none;
+  width: 40%;
+  padding: 0.5rem 0;
+  margin: 1rem auto;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

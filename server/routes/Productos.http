@@ -18,3 +18,18 @@ GET http://localhost:5500/api/productos/
 GET http://localhost:5500/api/productos/61d660081d68aac562a58076
 
 ###
+
+PUT http://localhost:5500/api/productos/update/61d6305653f13aa77a74d40b
+Content-Type: application/json
+
+{
+    "nombre": "notebook",
+    "precio": 1000000,
+    "descripcion": "notebook 16gb ram"
+}
+
+###
+
+DELETE http://localhost:5500/api/productos/delete/61d6305653f13aa77a74d40b
+
+###

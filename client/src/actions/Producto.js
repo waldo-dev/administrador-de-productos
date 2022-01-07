@@ -30,14 +30,4 @@ const getUnProducto = async (id) => {
   }
 };
 
-const editarProducto = async (id, data) => {
-  try {
-    await axios.patch(`/api/product/edit/${id}`, data);
-    return { success: true };
-  } catch (err) {
-    console.error(err);
-    return { success: false };
-  }
-};
-
-export { crearProducto, getProductos, getUnProducto, editarProducto };
+export { crearProducto, getProductos, getUnProducto };

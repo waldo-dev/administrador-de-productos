@@ -1,0 +1,19 @@
+.item {
+  list-style: none;
+}
+
+.item a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 1.5rem;
+}
+
+.button {
+  background-color: red;
+  border: 1px solid #000000;
+  border-radius: 0.5rem;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  margin: 1rem;
+  cursor: pointer;
+}
